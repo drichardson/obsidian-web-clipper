@@ -2,22 +2,6 @@
 
 import { readFileSync, writeFileSync } from 'fs';
 
-const result = await Bun.build({
-  entrypoints: ['./src/clipper.ts'],
-  outdir: './dist',
-  minify: true,
-  target: 'browser',
-  format: 'iife',
-});
-
-if (!result.success) {
-  console.error('Build failed:');
-  for (const message of result.logs) {
-    console.error(message);
-  }
-  process.exit(1);
-}
-
 const bundledCode = readFileSync('./dist/clipper.js', 'utf-8');
 
 function createBookmarklet(code: string): string {
@@ -29,7 +13,6 @@ function createBookmarklet(code: string): string {
 const bookmarklet = createBookmarklet(bundledCode);
 
 writeFileSync('./dist/bookmarklet.txt', bookmarklet);
-writeFileSync('./dist/clipper.min.js', bundledCode);
 
 const html = `<!DOCTYPE html>
 <html lang="en">

@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "bun run build.ts"
+    "build": "bun build ./src/clipper.ts --outdir=./dist --minify --target=browser --format=iife && bun run generate-bookmarklet.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
