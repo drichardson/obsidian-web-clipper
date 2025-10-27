@@ -1,0 +1,19 @@
+{
+  "name": "obsidian-web-clipper",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "bun run build.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@tehshrike/readability": "^0.2.0",
+    "turndown": "^7.2.2"
+  }
+}
