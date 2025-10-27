@@ -4,10 +4,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "bun build ./src/clipper.ts --outdir=./dist --minify --target=browser --format=iife && bun run generate-bookmarklet.ts"
+    "build": "bun build ./src/clipper.ts --outdir=./dist --minify --target=browser --format=iife && bun run generate-bookmarklet.ts && bun run validate",
+    "validate": "html-validate dist/index.html"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "html-validate": "^10.2.1"
   },
   "peerDependencies": {
     "typescript": "^5"
