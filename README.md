@@ -24,7 +24,7 @@ This bookmarklet is useful if you:
 
 ## For the Curious
 
-This project solves a specific problem with existing Obsidian web clipper bookmarklets. The original versions load dependencies (Turndown and Readability) from CDNs using `fetch()`, which fails on websites with Content Security Policy (CSP) headers that block external script loading. This version bundles all dependencies inline, eliminating the CSP issue.
+This project solves a specific problem with existing Obsidian web clipper bookmarklets. The original versions load dependencies ([Turndown](https://github.com/mixmark-io/turndown) and [Readability](https://github.com/mozilla/readability)) from CDNs using `fetch()`, which fails on websites with [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) headers that block external script loading. This version bundles all dependencies inline, eliminating the CSP issue.
 
 ### Credits
 
